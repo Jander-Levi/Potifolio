@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curriculo - Levi Rodrigues</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm;
+    }
+
+    :root {
+      --text: #111827;
+      --muted: #4b5563;
+      --line: #d1d5db;
+      --accent: #0f766e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      color: var(--text);
+      margin: 0;
+      font-size: 11pt;
+      line-height: 1.45;
+      background: #ffffff;
+    }
+
+    h1, h2, h3, p, ul { margin: 0; }
+
+    .header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    .name {
+      font-size: 24pt;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .role {
+      margin-top: 2px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 11pt;
+    }
+
+    .contact {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 10pt;
+    }
+
+    .section {
+      margin-top: 14px;
+    }
+
+    .section h2 {
+      font-size: 12pt;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .section .box {
+      border-top: 1px solid var(--line);
+      padding-top: 6px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    li { margin: 3px 0; }
+
+    .project {
+      margin-bottom: 10px;
+    }
+
+    .project h3 {
+      font-size: 11.2pt;
+      margin-bottom: 2px;
+    }
+
+    .links {
+      color: var(--muted);
+      font-size: 9.8pt;
+      margin-top: 2px;
+      word-break: break-all;
+    }
+
+    .footnote {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--line);
+      color: var(--muted);
+      font-size: 9pt;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="name">Levi Rodrigues Costa</h1>
+    <p class="role">Desenvolvedor Full Stack Junior</p>
+    <p class="contact">
+      E-mail: janderlevih@gmail.com | Localizacao: Brasil (Remoto) | 
+      GitHub: github.com/Jander-Levi | 
+      LinkedIn: linkedin.com/in/jander-levi-rodrigues-costa-196402261
+    </p>
+  </header>
+
+  <section class="section">
+    <h2>Resumo Profissional</h2>
+    <div class="box">
+      <p>
+        Desenvolvedor Full Stack em inicio de carreira, com foco em criacao de solucoes web completas,
+        do frontend ao backend. Tenho experiencia pratica com HTML, CSS, JavaScript e Node.js,
+        aplicando boas praticas de codigo limpo, usabilidade e organizacao de projetos.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Habilidades Tecnicas</h2>
+    <div class="box skills">
+      <ul>
+        <li>HTML5 semantico</li>
+        <li>CSS3 (Flexbox, Grid, responsividade)</li>
+        <li>JavaScript (ES6+)</li>
+      </ul>
+      <ul>
+        <li>Node.js e APIs REST</li>
+        <li>Banco de dados SQL (MySQL / PostgreSQL)</li>
+        <li>Git e GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Projetos em Destaque</h2>
+    <div class="box">
+      <article class="project">
+        <h3>Negocie Facil</h3>
+        <p>
+          Plataforma de negociacao de debitos com portal do cliente e portal administrador.
+          Projeto em desenvolvimento com foco em fluxo de atendimento e experiencia do usuario.
+        </p>
+        <p class="links">
+          Codigo: github.com/Jander-Levi/Sistema-Negocie-Facil | Demo: www.g2gnegocie.servicecorp.tech
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Sistema de Calculos Empresarial</h3>
+        <p>
+          Sistema financeiro web para calculo de juros por atraso, descontos proporcionais,
+          simulacoes e geracao de nota em PDF/impressao.
+        </p>
+        <p class="links">
+          Codigo: github.com/Jander-Levi/Sistema-de-calculos | Demo: www.juros.systemcodex.com.br
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>ReciclaTech</h3>
+        <p>
+          Prototipo cientifico voltado a design de interface e usabilidade para um conceito de
+          sistema de reciclagem inteligente.
+        </p>
+        <p class="links">
+          Codigo: github.com/Jander-Levi/ReciclaTech | Demo: www.reciclatech.systemcodex.com.br
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Idiomas e Perfil</h2>
+    <div class="box">
+      <ul>
+        <li>Portugues: nativo</li>
+        <li>Perfil: proativo, colaborativo e com foco em aprendizado continuo</li>
+        <li>Disponibilidade: remoto e projetos full stack</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="footnote">Curriculo atualizado em 29/03/2026.</p>
+</body>
+</html>
