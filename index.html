@@ -1,98 +1,76 @@
 <!DOCTYPE html>
-<!-- 
-  A tag <html> é a raiz (a base) de toda a página.
-  O atributo lang="pt-BR" avisa aos navegadores e buscadores (como o Google) que o idioma do site é Português do Brasil.
--->
 <html lang="pt-BR">
 <head>
-    <!-- O <head> é a "cabeça" da página. Aqui ficam as configurações invisíveis para o usuário, mas essenciais para o navegador. -->
-    
-    <!-- charset="UTF-8" garante que os acentos (ç, ã, é) apareçam corretamente na tela. -->
     <meta charset="UTF-8">
-    
-    <!-- Esta linha é o segredo para o site funcionar bem no celular (responsividade). Ela manda o site se adaptar à largura da tela. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- O <title> é o nome que aparece na aba do navegador. -->
     <title>Meu Portfólio | Desenvolvedor Full Stack</title>
     
-    <!-- Aqui conectamos nosso arquivo de estilos (design, cores, fontes) criado separadamente (styles.css) -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Importando fontes modernas do Google Fonts (Kumbh Sans) para deixar o texto mais elegante que o padrão. -->
+    <!-- Fontes modernas Google Fonts (Kumbh Sans e Space Grotesk) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
-    <!-- Importando ícones gratuitos da biblioteca FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- O <body> é o "corpo" da página. Tudo o que os usuários realmente enxergam na tela fica aqui dentro. -->
 
     <!-- ============================= -->
     <!-- CABEÇALHO (HEADER) E MENU     -->
     <!-- ============================= -->
     <header class="header">
         <div class="container nav-container">
-            <!-- A logo (que aqui é só seu nome) que fica no canto superior esquerdo -->
             <a href="#" class="logo">LEVI <span>RODRIGUES</span></a>
             
-            <!-- Botão "Hambúrguer" que só aparece no celular para abrir o menu -->
             <button class="mobile-menu-btn" aria-label="Abrir Menu">
                 <i class="fas fa-bars"></i>
             </button>
             
-            <!-- A <nav> (Navegação) guarda a lista de links do site -->
             <nav class="nav-menu">
                 <ul class="nav-list">
-                    <!-- Cada <li> é um item da lista do menu. A tag <a> cria um link conectando a outra parte da página usando o 'id' (#) -->
                     <li><a href="#inicio" class="nav-link">Início</a></li>
                     <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
                     <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
                     <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                    <li><a href="#contato" class="nav-link btn-primary">Fale Comigo</a></li>
+                    <li><a href="#contato" class="btn btn-primary btn-sm">Fale Comigo</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- O <main> guarda o conteúdo "principal" do site -->
     <main>
         <!-- ============================= -->
         <!-- SEÇÃO INÍCIO (HERO SECTION)   -->
         <!-- ============================= -->
-        <!-- O 'id="inicio"' é o alvo para onde a tela vai deslizar quando alguém clicar no menu "Início" -->
         <section id="inicio" class="hero-section">
             <div class="container hero-container">
-                <div class="hero-content">
-                    <!-- <h1> é o Título principal e mais importante da página (ajuda muito o Google a entender do que o site fala) -->
-                    <h1><span class="highlight">Olá!</span><br>Sou Desenvolvedor Full Stack.</h1>
+                <div class="hero-content reveal">
+                    <h1><span class="highlight">Sistema Iniciado.</span>Sou <span class="typing" id="typing-text">Desenvolvedor Full Stack_</span></h1>
                     
-                    <!-- <p> é usado para escrever parágrafos comuns de texto -->
-                    <p>Apaixonado por criar soluções web inovadoras, do layout até o banco de dados. Estou no início da minha carreira, com muita vontade de aprender e construir tecnologias incríveis.</p>
+                    <p>Apaixonado por criar soluções web inovadoras, do layout ao banco de dados. Utilizo as melhores práticas do mercado para construir tecnologias rápidas, responsivas e visualmente incríveis.</p>
                     
                     <div class="hero-buttons">
-                        <!-- Botões que levam a outras seções da própria página ou arquivos externos -->
-                        <a href="#projetos" class="btn btn-primary">Ver Meus Projetos</a>
+                        <a href="#projetos" class="btn btn-primary">Ver Projetos <i class="fas fa-code"></i></a>
                         <a href="assets/curriculo.pdf" target="_blank" class="btn btn-secondary">
-                            <i class="fas fa-download"></i> Baixar Currículo
+                            <i class="fas fa-download"></i> Download CV
                         </a>
                     </div>
                     
-                    <!-- Links rápidos para redes sociais logo de cara -->
                     <div class="social-links">
-                        <!-- 'target="_blank"' faz o link abrir em uma aba nova, para a pessoa não sair do seu site -->
                         <a href="https://github.com/Jander-Levi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://linkedin.com/in/jander-levi-rodrigues-costa-196402261/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
-                <div class="hero-image-box">
-                    <!-- Imagem principal de capa. O atributo 'alt' descreve a imagem para deficientes visuais lerem a tela (acessibilidade). -->
+                <div class="hero-image-box reveal">
+                    <!-- Avatares Flutuantes com Efeito Tech -->
+                    <img src="img/floating_avatar_1.png" alt="Tech icon" class="floating-avatar float-1">
+                    <img src="img/floating_avatar_2.png" alt="Code icon" class="floating-avatar float-2">
+                    
                     <div class="image-wrapper">
-                        <!-- Substitua 'assets/perfil.jpg' pelo caminho da sua foto no futuro! -->
-                        <img src="img/foto de perfil.jpeg" alt="Sua Foto de Perfil" class="hero-img">
+                        <!-- Imagem Principal Tech -->
+                        <img src="img/avatar_principal.png" alt="Sua Foto de Perfil 3D" class="hero-img">
                     </div>
                 </div>
             </div>
@@ -102,24 +80,22 @@
         <!-- SEÇÃO SOBRE MIM               -->
         <!-- ============================= -->
         <section id="sobre" class="about-section">
-            <div class="container">
-                <!-- <h2> é o Título secundário (usado para títulos de seções) -->
+            <div class="container reveal">
                 <h2 class="section-title">Sobre <span>Mim</span></h2>
                 
                 <div class="about-content">
                     <p class="about-text">
-                        Comecei minha jornada na programação movido pela curiosidade de entender como a web funciona. Como um <strong>Desenvolvedor Full Stack Júnior</strong>, meu foco é escrever código limpo, organizado (como todo este portfólio!) e que resolva problemas do mundo real.
+                        Comecei minha jornada na programação movido pela curiosidade de entender como a web e grandes sistemas funcionam por baixo dos panos. Como <strong>Desenvolvedor Full Stack Júnior</strong>, meu foco absoluto é escrever código limpo, arquiteturar excelentes lógicas de negócio e providenciar interfaces <strong>Premium</strong>.
                         <br><br>
-                        Gosto de trabalhar tanto com o que o usuário vê (Frontend: HTML, CSS, JavaScript) quanto com o motor e regras de negócio que funcionam nos bastidores (Backend: Node.js, Bancos de Dados). Acredito que aprender é um processo contínuo e estou sempre buscando um novo desafio.
+                        Trabalho com agilidade tanto no Frontend (animações, design responsivo, estabilidade do usuário) quanto no Backend (Node, Bancos de Dados Relacionais). Estou em constante evolução, desbravando novas techs diáriamente!
                     </p>
                     
-                    <!-- Estatísticas rápidas para impressionar o visitante -->
                     <div class="about-stats">
-                        <div class="stat-box">
+                        <div class="stat-box reveal">
                             <span class="stat-number">+3</span>
                             <span class="stat-label">Projetos Feitos</span>
                         </div>
-                        <div class="stat-box">
+                        <div class="stat-box reveal">
                             <span class="stat-number">100%</span>
                             <span class="stat-label">Dedicação</span>
                         </div>
@@ -133,44 +109,43 @@
         <!-- ============================= -->
         <section id="habilidades" class="skills-section bg-darker">
             <div class="container">
-                <h2 class="section-title">Minhas <span>Habilidades</span></h2>
+                <h2 class="section-title reveal">Stack <span>Tech</span></h2>
                 
                 <div class="skills-grid">
-                    <!-- Nós criamos pequenos 'cards' (cartões) para cada habilidade -->
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <i class="fab fa-html5 skill-icon" style="color: #e34c26;"></i>
                         <h3>HTML5</h3>
-                        <p>Estruturação semântica de páginas web.</p>
+                        <p>Estruturas altamente semânticas para sistemas limpos.</p>
                     </div>
                     
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <i class="fab fa-css3-alt skill-icon" style="color: #264de4;"></i>
                         <h3>CSS3</h3>
-                        <p>Estilização moderna com Flexbox e responsividade.</p>
+                        <p>Animações fluidas, Glassmorphism e Responsividade.</p>
                     </div>
                     
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <i class="fab fa-js skill-icon" style="color: #f0db4f;"></i>
                         <h3>JavaScript</h3>
-                        <p>Lógica de programação e dinamismo no Frontend.</p>
+                        <p>Lógica avançada, DOM assíncrono e APIs.</p>
                     </div>
                     
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <i class="fab fa-node-js skill-icon" style="color: #68a063;"></i>
                         <h3>Node.js</h3>
-                        <p>Desenvolvimento Backend e criação de APIs.</p>
+                        <p>Backend veloz e criação de rotas seguras.</p>
                     </div>
                     
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <i class="fas fa-database skill-icon" style="color: #f29111;"></i>
                         <h3>Banco de Dados</h3>
-                        <p>Criação e consulta SQL (MySQL / PostgreSQL).</p>
+                        <p>MySQL, PostgreSQL e Queries Refinadas.</p>
                     </div>
                     
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <i class="fab fa-git-alt skill-icon" style="color: #f34f29;"></i>
                         <h3>Git & GitHub</h3>
-                        <p>Controle de versão de código em equipe.</p>
+                        <p>Controle de versão de código blindado.</p>
                     </div>
                 </div>
             </div>
@@ -181,25 +156,18 @@
         <!-- ============================= -->
         <section id="projetos" class="projects-section">
             <div class="container">
-                <h2 class="section-title">Meus <span>Projetos</span></h2>
+                <h2 class="section-title reveal">Meus <span>Projetos</span></h2>
                 
                 <div class="projects-grid">
-                    <!-- Cada projeto ganha um "Card" (cartão). Isso repete o mesmo padrão de classe CSS. -->
-                    
                     <!-- PROJETO 1 -->
-                    <div class="project-card">
+                    <div class="project-card reveal">
                         <div class="project-img-wrapper">
-                            <!-- Link para imagem ilustrativa do projeto -->
-                            <img src="img/negocie-facil.png" alt="Projeto Pessoal 1" class="project-img">
+                            <img src="img/negocie-facil.png" alt="Sistema Negocie Fácil" class="project-img">
                         </div>
                         <div class="project-info">
                             <h3>Negocie Fácil</h3>
-                            <p>Uma plataforma de negociação de débitos composta por dois ambientes integrados:<br> 
-                            Portal do Cliente (público)<br>
-                            Portal do Administrador (área restrita)<br>
-                        <strong>Em fase de desenvolvimento</strong></p>
+                            <p>Uma plataforma de negociação de débitos com dois ambientes integrados (Portal Cliente e Admin). Atualmente em fase de otimização contínua.</p>
                             
-                            <!-- Tags menores indicando tecnologia -->
                             <div class="project-tags">
                                 <span class="tag">HTML</span>
                                 <span class="tag">CSS</span>
@@ -207,47 +175,47 @@
                             </div>
                             
                             <div class="project-links">
-                                <a href="https://github.com/Jander-Levi/Sistema-Negocie-Facil" target="_blank" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Código</a>
-                                <a href="https://www.g2gnegocie.servicecorp.tech/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Ver Demo</a>
+                                <a href="https://github.com/Jander-Levi/Sistema-Negocie-Facil" target="_blank" class="btn btn-sm btn-secondary"><i class="fab fa-github"></i> Source</a>
+                                <a href="https://www.g2gnegocie.servicecorp.tech/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-satellite-dish"></i> Live App</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- PROJETO 2 -->
-                    <div class="project-card">
+                    <div class="project-card reveal">
                         <div class="project-img-wrapper">
-                            <img src="img/sistema financeiro.png" alt="Projeto Pessoal 2" class="project-img">
+                            <img src="img/sistema financeiro.png" alt="Sistema Empresarial" class="project-img">
                         </div>
                         <div class="project-info">
-                            <h3>Sistema de Calculos Empresarial</h3>
-                            <p>Criei um Sistema Financeiro web (HTML, CSS e JavaScript) para calcular juros por atraso , descontos proporcionais e intervalos/projeções de dados , com histórico de simulações e geração de nota em PDF/impressão.</p>
+                            <h3>Sistema de Cálculos</h3>
+                            <p>Sistema Financeiro web super interativo para calcular juros proporcionais, dar descontos customizados e simular impressões em PDF.</p>
                             <div class="project-tags">
                                 <span class="tag">HTML</span>
                                 <span class="tag">CSS</span>
                                 <span class="tag">JS</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Jander-Levi/Sistema-de-calculos" target="_blank" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Código</a>
-                                <a href="https://www.juros.systemcodex.com.br/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Ver Demo</a>
+                                <a href="https://github.com/Jander-Levi/Sistema-de-calculos" target="_blank" class="btn btn-sm btn-secondary"><i class="fab fa-github"></i> Source</a>
+                                <a href="https://www.juros.systemcodex.com.br/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-satellite-dish"></i> Live App</a>
                             </div>
                         </div>
                     </div>
                     
                     <!-- PROJETO 3 -->
-                    <div class="project-card">
+                    <div class="project-card reveal">
                         <div class="project-img-wrapper">
-                            <img src="img/ReciclaTech.png" alt="Projeto Pessoal 3" class="project-img">
+                            <img src="img/ReciclaTech.png" alt="ReciclaTech" class="project-img">
                         </div>
                         <div class="project-info">
                             <h3>ReciclaTech</h3>
-                            <p>Protótipo científico para prática de design de interface e usabilidade, desenvolvido como parte de um estudo/conceito de sistema de reciclagem inteligente.</p>
+                            <p>Protótipo de usabilidade com design de interface polido para um conceito de conscientização de reciclagem inteligente local.</p>
                             <div class="project-tags">
                                 <span class="tag">HTML</span>
                                 <span class="tag">CSS</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Jander-Levi/ReciclaTech" target="_blank" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Código</a>
-                                <a href="https://www.reciclatech.systemcodex.com.br/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Ver Demo</a>
+                                <a href="https://github.com/Jander-Levi/ReciclaTech" target="_blank" class="btn btn-sm btn-secondary"><i class="fab fa-github"></i> Source</a>
+                                <a href="https://www.reciclatech.systemcodex.com.br/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-satellite-dish"></i> Live App</a>
                             </div>
                         </div>
                     </div>
@@ -260,46 +228,42 @@
         <!-- SEÇÃO CONTATO                 -->
         <!-- ============================= -->
         <section id="contato" class="contact-section bg-darker">
-            <div class="container">
-                <h2 class="section-title">Fale <span>Comigo</span></h2>
+            <div class="container reveal">
+                <h2 class="section-title">Contato <span>Hub</span></h2>
                 
                 <div class="contact-content">
-                    <!-- O formulário onde as pessoas enviam mensagens. Aqui ele não enviará pro servidor de verdade, usaremos o JS para criar um alerta simulando o envio. -->
-                    <form id="form-contato" class="contact-form">
+                    <form id="form-contato" class="contact-form reveal">
                         <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <!-- required="true" força a pessoa a preencher antes de enviar o botão -->
-                            <input type="text" id="nome" name="nome" placeholder="John Doe" required>
+                            <label for="nome">Nome / Empresa</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                            <label for="email">Canal de Contato</label>
+                            <input type="email" id="email" name="email" placeholder="seu-email@dominio.com" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Olá, gostei do seu perfil! Gostaria de conversar sobre uma oportunidade..." required></textarea>
+                            <label for="mensagem">Detalhes</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Abra uma conexão de rede com minha base..." required></textarea>
                         </div>
                         
-                        <!-- Usamos type="submit" no botão. Ele avisa o navegador que este é o botão oficial de "enviar o formulário". -->
-                        <button type="submit" class="btn btn-primary w-100">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="btn btn-primary w-100">Transmitir Dados <i class="fas fa-paper-plane"></i></button>
                     </form>
                     
-                    <!-- Informações de contato alternativas -->
                     <div class="contact-info">
-                        <div class="info-item">
+                        <div class="info-item reveal">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>E-mail</h4>
                                 <p>janderlevih@gmail.com</p>
                             </div>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-item reveal">
+                            <i class="fas fa-satellite"></i>
                             <div>
                                 <h4>Localização</h4>
-                                <p>Brasil (Remoto)</p>
+                                <p>Servidor do Brasil (Remoto)</p>
                             </div>
                         </div>
                     </div>
@@ -314,26 +278,21 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-logo">
-                <a href="#inicio">Levi<span>Rodrigues</span></a>
-                <p>Construindo soluções web de ponta a ponta.</p>
+                <a href="#inicio" class="logo" style="font-size:1.5rem">LEVI<span>RODRIGUES</span></a>
+                <p>Construindo arquiteturas e interfaces premium para a web do futuro.</p>
             </div>
             
             <div class="footer-social">
-                <!-- Redes sociais e botões no fim da página para quem já leu até o final -->
                 <a href="https://github.com/Jander-Levi"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/jander-levi-rodrigues-costa-196402261/"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/levih_rodrigues/"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <!-- Puxando o ano real via JavaScript seria legal, mas deixamos fixo como base -->
-            <p>&copy; <span id="ano-atual">2026</span> Levi Rodrigues!</p>
+            <p>&copy; <span id="ano-atual">2026</span> Levi Rodrigues • Sistema Online.</p>
         </div>
     </footer>
 
-    <!-- Importamos o JavaScript bem no final do código HTML (logo antes do fechamento do <body>). 
-         Motivo: Garantimos que o navegador já carregou e "desenhou" todo o seu site HTML antes de rodar 
-         o código JS, evitando erros onde o JS não acha o elemento na tela. -->
     <script src="script.js"></script>
 </body>
 </html>
