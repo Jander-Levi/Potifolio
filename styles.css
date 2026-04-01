@@ -287,7 +287,7 @@ img {
 }
 .image-wrapper {
   position: relative;
-  width: 380px; height: 480px;
+  width: 100%; max-width: 380px; height: 480px; margin: 0 auto;
   border-radius: 20px;
   clip-path: polygon(20% 0%, 100% 0, 100% 80%, 80% 100%, 0 100%, 0% 20%); /* Corte "Cyberpunk" nas quinas */
   background: rgba(0, 240, 255, 0.05);
@@ -375,7 +375,7 @@ img {
 
 /* 8. PROJETOS (PORTFÓLIO) ================================================ */
 .projects-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;
 }
 .project-card {
   background: rgba(10, 15, 30, 0.6);
@@ -481,9 +481,11 @@ img {
 
 /* 10. MEDIA QUERIES ====================================================== */
 @media (max-width: 992px) {
+  .section-title { font-size: 2.4rem; margin-bottom: 50px; }
+  .about-section, .skills-section, .projects-section, .contact-section { padding: 90px 0; }
   .hero-container { flex-direction: column-reverse; text-align: center; }
   .hero-content { align-items: center; }
-  .hero-content p { border-left: none; padding-left: 0; margin-left: auto; margin-right: auto;}
+  .hero-content p { border-left: none; padding-left: 0; margin-left: auto; margin-right: auto; }
   .hero-buttons, .social-links { justify-content: center; }
   .contact-content { grid-template-columns: 1fr; }
 }
@@ -492,15 +494,49 @@ img {
   .mobile-menu-btn { display: block; }
   .nav-list {
     position: absolute; top: var(--header-height); left: 0; width: 100%;
-    background-color: rgba(5, 8, 16, 0.95); backdrop-filter: blur(15px);
+    background-color: rgba(5, 8, 16, 0.98); backdrop-filter: blur(15px);
     flex-direction: column; align-items: center; padding: 40px 0; gap: 20px;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.4s ease-in-out; border-bottom: 1px solid rgba(0, 240, 255, 0.2);
   }
   .nav-list.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   
-  .about-stats { flex-direction: column; gap: 30px; }
-  .hero-content h1 { font-size: 2.8rem; }
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content p { font-size: 1.05rem; }
+  .hero-image-box::before { width: 220px; height: 220px; }
+  .image-wrapper { height: 400px; }
+  
+  .floating-avatar { display: none; } /* Esconde avatares flutuantes para diminuir a poluição mobile */
+  
+  .about-stats { flex-direction: column; gap: 20px; }
+  .stat-box { min-width: 200px; }
+  
+  .projects-grid { grid-template-columns: 1fr; } /* Força 1 coluna em celular e tablet */
+  
   .footer-content { flex-direction: column; text-align: center; gap: 30px; }
   .footer-logo { margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+  .section-title { font-size: 2rem; margin-bottom: 40px; }
+  .about-section, .skills-section, .projects-section, .contact-section { padding: 60px 0; }
+  
+  .hero-section { padding-top: calc(var(--header-height) + 30px); padding-bottom: 60px; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 15px; }
+  .hero-buttons .btn { width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px; }
+  
+  .image-wrapper { height: 320px; border-radius: 15px; }
+  
+  .stat-box { min-width: 100%; padding: 15px; }
+  .stat-number { font-size: 2.8rem; }
+  .stat-label { font-size: 0.85rem; }
+  
+  .skills-grid { grid-template-columns: 1fr; gap: 20px; }
+  
+  .contact-form { padding: 25px 15px; }
+  .info-item { flex-direction: column; text-align: center; gap: 15px; padding: 20px; }
+  
+  .footer { padding: 40px 0 20px 0; }
 }
